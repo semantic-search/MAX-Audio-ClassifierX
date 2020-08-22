@@ -112,7 +112,7 @@ $ cd MAX-Audio-Classifier
 To build the Docker image locally, run:
 
 ```bash
-$ docker build -t max-audio-classifier .
+$ docker build -t max-audio-classifierx .
 ```
 
 All required model assets will be downloaded during the build process. _Note_ that currently this Docker image is CPU
@@ -124,7 +124,7 @@ only (we will add support for GPU images later).
 To run the Docker image, which automatically starts the model serving API, run:
 
 ```bash
-$ docker run -it -p 5000:5000 max-audio-classifier
+$ docker run -it --env-file .env max-audio-classifierx
 ```
 
 ### 3. Use the Model
